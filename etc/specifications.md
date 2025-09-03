@@ -12,4 +12,4 @@
 **What are the components of this application?**\
 **What needs to happen next?**\
 **What must happen before the next step?**\
-**What needs to be tracked?**\
+**What needs to be tracked?**
