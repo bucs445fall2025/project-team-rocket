@@ -12,3 +12,9 @@
 | **Alex E.** | x86          | Novice      |
 | **Alex E.** | SQL          | Novice      |
 | **Alex E.** | Linux        | Novice      |
+| **Vaughn S.** | C          | Competent   |
+| **Vaughn S.** | Makefile   | Competent   |
+| **Vaughn S.** | C++        | Competent   |
+| **Vaughn S.** | Python     | Competent   |
+| **Vaughn S.** | Java       | Novice      |
+| **Vaughn S.** | Git        | Novice      |
