@@ -1,28 +1,29 @@
 # **Project Specifications**
 **How will you use this application?**
-
-Where would the user be located physically when using this application?
-
-Where would the results be visible?
-
-When will this application be used?
-
-When can the application fail?
-
-Who is my user?
-
-Who will deliver the inputs for the application?
-
-Who will receive the outputs of the application?
-
-What do I know about this application?
-
-What does this application need to do?
-
-What are the components of this application?
-
-What needs to happen next?
-
-What must happen before the next step?
-
-What needs to be tracked?
+WIP
+**Where would the user be located physically when using this application?**
+WIP
+**Where would the results be visible?**
+WIP
+**When will this application be used?**
+WIP
+**When can the application fail?**
+WIP
+**Who is my user?***
+WIP
+**Who will deliver the inputs for the application?**
+WIP
+**Who will receive the outputs of the application?**
+WIP
+**What do I know about this application?**
+WIP
+**What does this application need to do?**
+WIP
+**What are the components of this application?**
+WIP
+**What needs to happen next?**
+WIP
+**What must happen before the next step?**
+WIP
+**What needs to be tracked?**
+WIP
