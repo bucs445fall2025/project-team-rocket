@@ -29,7 +29,7 @@
 # **Team Setup**
 
 ## **Team Members:**
-[List all team members involved in the project.]
+[Alex Eskenazi, Vaughn Stout, Vishil Patel]
 
 ## **Team Roles:**
 [Define roles for each team member, such as developer, designer, project manager, QA tester, etc.]
