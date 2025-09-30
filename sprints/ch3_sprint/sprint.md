@@ -32,13 +32,18 @@
 ### Alex Eskenazi, Vaughn Stout, Vishil Patel
 
 ## **Team Roles:**
-[Define roles for each team member, such as developer, designer, project manager, QA tester, etc.]
+### Alex Eskenazi - Frontend Dev, UI Design
+### Vaughn Stout - Backend Dev (DB + API), Documentation, Team Lead
+### Vishil Patel - Backend Dev (API + Auth), QA Tester
 
 ## **Team Norms:**
-[Establish how the team will communicate, how often meetings will happen, and any other ground rules for collaboration.]
+Team will communicate through text, and will have weekly meetings on Fridays from 3:00PM-4:00PM. Will regularly check up with each other on sprint progress or after any commits are made.
 
 ## **Application Stack:**
-[List all the technologies being used in the project, including programming languages, frameworks, and tools.]
+Frontend will use React library, probably with CSS for UI.
+Backend API will use Python, likely with Flask framework.
+Backend DB will use PostgreSQL.
+
 
 ### **Libraries/Frameworks:**
-[List any specific libraries or frameworks your application will use, such as React, Flask, Django, etc.]
+React, Flask.
