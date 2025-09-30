@@ -2,12 +2,45 @@
 
 ## **Application Vision/Goal:**
 [Describe the overall purpose and vision of the application. What problem does it solve? Who is the target audience?]
-
+We want to build a website where students can share and find internships. Right now, a lot of info gets spread out across emails, Discord, LinkedIn, or random group chats, and its all over the place and hard to manage, but by creating a Internship Hub, everything’s in one place and easier to find allowing students to share opportunities and tips to help each other out.
 ## **Scope:**
 [List the major features and functionalities that define the scope of the project. Keep this high-level to avoid feature creep.]
+Students can post internships with a link, title, description, and tags (like “Software Engineering,” “NYC,” or “Fall 2025”).
 
+Users can comment under a post to add info like deadlines, interview tips, or personal experiences they may have.
+
+A voting system lets people upvote the most helpful opportunities to spread important and trending opportunities or chats.
+
+Search and filters help find posts by company, role, or tags.
+
+Users can report broken links or expired posts so the board stays clean.
 ## **Deliverables:**
 [List what will be delivered by the end of the project, such as a working MVP (Minimum Viable Product), specific features, documentation, etc.]
+A working MVP web app.
+
+Core features:
+
+Posting internships with title, description, tags, and link.
+
+Commenting on posts.
+
+Voting system so the most useful internships rise to the top.
+
+Search and filter functionality (by keyword, company, and tags).
+
+Reporting feature for not working/expired opportunities.
+
+A simple login/authentication system for posting and voting.
+
+A SQLite database storing posts, comments, votes, and reports.
+
+Documentation, including: How to run the app locally, Project design and architecture overview, & User guide for main features.
+
+Testing:
+
+Unit tests for backend routes (posts, votes, reports).
+
+Manual testing of the UI.
 
 ## **Success Criteria:**
 [Define what will make this project successful. Examples include meeting deadlines, delivering core functionality, or achieving performance benchmarks.]
