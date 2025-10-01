@@ -1,10 +1,10 @@
 # **Project Overview**
 
 ## **Application Vision/Goal:**
-[Describe the overall purpose and vision of the application. What problem does it solve? Who is the target audience?]
+
 We want to build a website where students can share and find internships. Right now, a lot of info gets spread out across emails, Discord, LinkedIn, or random group chats, and its all over the place and hard to manage, but by creating a Internship Hub, everything’s in one place and easier to find allowing students to share opportunities and tips to help each other out.
 ## **Scope:**
-[List the major features and functionalities that define the scope of the project. Keep this high-level to avoid feature creep.]
+
 Students can post internships with a link, title, description, and tags (like “Software Engineering,” “NYC,” or “Fall 2025”).
 
 Users can comment under a post to add info like deadlines, interview tips, or personal experiences they may have.
@@ -15,7 +15,7 @@ Search and filters help find posts by company, role, or tags.
 
 Users can report broken links or expired posts so the board stays clean.
 ## **Deliverables:**
-[List what will be delivered by the end of the project, such as a working MVP (Minimum Viable Product), specific features, documentation, etc.]
+
 A working MVP web app.
 
 Core features:
@@ -43,7 +43,6 @@ Unit tests for backend routes (posts, votes, reports).
 Manual testing of the UI.
 
 ## **Success Criteria:**
-[Define what will make this project successful. Examples include meeting deadlines, delivering core functionality, or achieving performance benchmarks.]
 
 People can actually use it to post and browse internships.
 
@@ -56,7 +55,6 @@ Reported posts get flagged for review.
 The app runs on both laptop and phone browsers without looking broken.
 
 ## **Assumptions:**
-[List any assumptions about the technology, users, or resources that could impact development.]
 Everyone using the site is a student who just wants to share or find internships.
 
 For MVP, we’ll keep authentication simple (school email or just a basic login).
@@ -66,7 +64,6 @@ SQLite is fine as a starter database, but we could switch to PostgreSQL if neede
 We’ll all stay on top of GitHub so our code doesn’t get messy.
 
 ## **Risks:**
-[Identify potential risks and challenges, such as technical limitations, resource constraints, or dependency issues.]
 
 Setting up login/auth might take longer than we expect.
 
@@ -78,7 +75,6 @@ Testing might get rushed if we save it until the very e
 
 
 ## **Design / Architectural Review:**
-[Outline the initial thoughts on application architecture. Will it be monolithic or microservices? Will it use a database? What major components will be included?]
 
 Design / Architecture:
 
@@ -102,7 +98,6 @@ Reporting feature.
 
 Flow: Browser → API (FastAPI) → Database → API response → UI update.
 ## **Test Environment:**
-[Define how the application will be tested. Will you use automated tests? What environment will the tests run in?]
 Local testing on our laptops.
 
 Unit tests (pytest) for backend endpoints.
@@ -110,7 +105,6 @@ Unit tests (pytest) for backend endpoints.
 Manual frontend testing for posting, voting, and search.
 
 A set of fake posts in the database so we can test filters and rankings.
----
 
 # **Team Setup**
 
