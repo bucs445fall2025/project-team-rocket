@@ -45,18 +45,71 @@ Manual testing of the UI.
 ## **Success Criteria:**
 [Define what will make this project successful. Examples include meeting deadlines, delivering core functionality, or achieving performance benchmarks.]
 
+People can actually use it to post and browse internships.
+
+Voting changes the order of posts (popular ones show up first).
+
+Search and filters actually narrow things down.
+
+Reported posts get flagged for review.
+
+The app runs on both laptop and phone browsers without looking broken.
+
 ## **Assumptions:**
 [List any assumptions about the technology, users, or resources that could impact development.]
+Everyone using the site is a student who just wants to share or find internships.
+
+For MVP, we’ll keep authentication simple (school email or just a basic login).
+
+SQLite is fine as a starter database, but we could switch to PostgreSQL if needed.
+
+We’ll all stay on top of GitHub so our code doesn’t get messy.
 
 ## **Risks:**
 [Identify potential risks and challenges, such as technical limitations, resource constraints, or dependency issues.]
 
+Setting up login/auth might take longer than we expect.
+
+People might try to add too many features and go off-scope.
+
+If we don’t keep communication consistent, merge conflicts could waste time.
+
+Testing might get rushed if we save it until the very e
+
+
 ## **Design / Architectural Review:**
 [Outline the initial thoughts on application architecture. Will it be monolithic or microservices? Will it use a database? What major components will be included?]
 
+Design / Architecture:
+
+Frontend: React + TailwindCSS (clean, mobile-friendly).
+
+Backend: Python FastAPI.
+
+Database: SQLite (file-based, easy to set up).
+
+Main Parts:
+
+Post system (create, edit, delete internships).
+
+Comments (linked to each post).
+
+Votes (up/down, affects ranking).
+
+Search + filter by tags.
+
+Reporting feature.
+
+Flow: Browser → API (FastAPI) → Database → API response → UI update.
 ## **Test Environment:**
 [Define how the application will be tested. Will you use automated tests? What environment will the tests run in?]
+Local testing on our laptops.
 
+Unit tests (pytest) for backend endpoints.
+
+Manual frontend testing for posting, voting, and search.
+
+A set of fake posts in the database so we can test filters and rankings.
 ---
 
 # **Team Setup**
