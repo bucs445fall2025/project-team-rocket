@@ -18,3 +18,8 @@
 | **Vaughn S.** | Python     | Competent   |
 | **Vaughn S.** | Java       | Novice      |
 | **Vaughn S.** | Git        | Novice      |
+| **Vishil P.** | Java       | Novice      |
+| **Vishil P.** | C++        | Novice      |
+| **Vishil P.** | C          | Novice      |
+| **Vishil P.** | Python     | Novice      |
+| **Vishil P.** | Makefile   | Novice      |
