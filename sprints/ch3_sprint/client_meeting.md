@@ -6,13 +6,17 @@
 
 ## Requirements Attempted in next Sprint
 
+- Storage
+  - schema   
 
 ## Milestone Status (Pass/Fail)
 
+Pass
 
 ## Requested Changes
 
 
 ## Additional Notes
 
+- potentially using mysql
 
