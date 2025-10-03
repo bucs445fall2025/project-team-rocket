@@ -1,8 +1,14 @@
 ## **Backend**
-- **Python (Slim)** → [python:3.12-slim](https://hub.docker.com/_/python)
+- **Python 3.12** (Flask app, app factory pattern)
+- **Flask** (Web framework)
+- **Flask-SQLAlchemy** (ORM)
 
-## **DB**
-- **PostgreSQL** → [postgres:18](https://hub.docker.com/_/postgres)
+## **Database**
+- **SQLite** (development, local testing)
+- **PostgreSQL** We may switch to PostgreSQL later on for production.
+## **Testing**
+- **pytest** for unit/integration tests
 
 ## **Additional Dependencies**
-- Still figuring out web server/cache specs if we go that route.
+- Requirements managed in `requirements.txt`
+- Web server/cache specs - we will figure it out later on
