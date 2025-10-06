@@ -1,6 +1,6 @@
-Software Requirements – Internship Hub
-What We're Building
-User Features
+Software Requirements – Internship Hub\
+What We're Building\
+User Features\
 
 Students can sign up and log in to their accounts
 
