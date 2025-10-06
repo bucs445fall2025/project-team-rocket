@@ -2,9 +2,9 @@
 
 *note: replace anything surrounded by << >> and **remove** the << >>*
 
-**Attended**: << record the team members in attendance (virtual counts as long as they are participating) >>
+**Attended**: Alex Eskenazi, Vaughn Stout, Vishil Patel
 
-**DATE**: << meeting date >>
+**DATE**: 10/6/2025
 
 ***
 
@@ -16,7 +16,7 @@
 
 ### User Story
 
-<< Corresponding User Stories completed in this sprint >>
+N/A
 
 ### Sprint Requirements Attempted
 
