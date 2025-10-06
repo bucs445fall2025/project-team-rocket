@@ -12,7 +12,7 @@
 
 ### SRS Sections Updated
 
-<< List any SRS sections that were updated in the last sprint >>
+SRS Created, all sections updated
 
 ### User Story
 
@@ -33,7 +33,7 @@ Haven't implemented real data.
 
 ### The summary of the entire project
 
-<< A general overview of the entire project >>
+N/A
 
 ***
 
