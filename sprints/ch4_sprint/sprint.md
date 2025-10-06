@@ -33,7 +33,9 @@ Haven't implemented real data.
 
 ### The summary of the entire project
 
-N/A
+We are creating a web app where students can share and find internship opportunities. Users can post internships with details like the company, description, and tags, and others can comment or upvote them.
+
+The goal is to make it easier for students to discover real, useful internships all in one place. We’re starting with basic features like login, posting, commenting, and voting, and will keep improving it as we go.
 
 ***
 
