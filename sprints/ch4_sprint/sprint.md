@@ -20,15 +20,16 @@ N/A
 
 ### Sprint Requirements Attempted
 
-<< The corresponding SRS requirement that the team completed in the last sprint >>
+- Storage
+- schema  
 
 ### Completed Requirements
 
-<< The work that's been completed in this sprint >>
+Created working database with test data/information and created a corresponding DB schema
 
 ### Incomplete Requirements
 
-<< The work that has not been completed in this sprint. Be VERY detailed and specific regarding what isn't working and what needs to be completed >>
+Haven't implemented real data.
 
 ### The summary of the entire project
 
