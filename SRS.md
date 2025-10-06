@@ -1,4 +1,4 @@
-### Software Requirements – Internship Hub\
+### Software Requirements – Internship Hub
 ## Account Features
 
 Students can sign up and log in to their accounts
