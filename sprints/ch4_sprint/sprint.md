@@ -77,6 +77,6 @@ Password security and session bugs may appear
 ### Team Work Assignments
 
 
-Alex backend auth routes hashing and session logic
-Vaughn frontend pages for signup login and posting plus documentation
+Alex frontend pages for signup login and posting plus documentation\
+Vaughn backend auth routes hashing and session logic\
 Vishil database integration query checks and testing
