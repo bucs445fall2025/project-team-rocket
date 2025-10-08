@@ -43,11 +43,11 @@ The goal is to make it easier for students to discover real, useful internships 
 
 ## Requirements Flex
 
-<< # >>/3 requirement flexes remaining
+3/3 requirement flexes remaining
 
 ## Technical Debt
 
-User authentication system including signup, login, and session management
+N/A (Unless not having User Stories set up is an issue)
 
 ### Requirement Target
 
@@ -57,7 +57,7 @@ Session management and auth guard for protected pages
 
 ### User Stories
 
-<< Corresponding User Stories >>
+Setting up User Stories this sprint, haven't done it yet
 
 ### Planning
 
@@ -76,7 +76,6 @@ Password security and session bugs may appear
 
 ### Team Work Assignments
 
-
-Alex backend auth routes hashing and session logic
-Vaughn frontend pages for signup login and posting plus documentation
-Vishil database integration query checks and testing
+Alex - backend auth routes hashing and session logic\
+Vaughn - frontend pages for signup login and posting plus documentation\
+Vishil - database integration query checks and testing
