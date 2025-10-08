@@ -12,7 +12,7 @@
 
 ### SRS Sections Updated
 
-SRS Created, all sections updated
+Introduction, Functional Requirements, Non-Functional Requirements
 
 ### User Story
 
@@ -20,16 +20,16 @@ N/A
 
 ### Sprint Requirements Attempted
 
-- Storage
-- schema  
+Database setup and schema creation
+Basic data storage and retrieval
 
 ### Completed Requirements
 
-Created working database with test data/information and created a corresponding DB schema
+Set up a working database with sample internship data and a schema for storing posts and user accounts. Verified that the database can handle adding and reading test data.
 
 ### Incomplete Requirements
 
-Haven't implemented real data.
+N/A
 
 ### The summary of the entire project
 
@@ -47,11 +47,13 @@ The goal is to make it easier for students to discover real, useful internships 
 
 ## Technical Debt
 
-<< Any requirements from the previous sprint that are using a technical flex >>
+User authentication system including signup, login, and session management
 
 ### Requirement Target
 
-<< The corresponding SRS requirement that our team will be complete in next sprint >>
+User authentication with signup login and logout
+Password hashing and email uniqueness checks
+Session management and auth guard for protected pages
 
 ### User Stories
 
@@ -59,16 +61,22 @@ The goal is to make it easier for students to discover real, useful internships 
 
 ### Planning
 
-<< Our team's detailed plan to complete the sprint >>
+Create backend routes for signup login and logout
+Validate input and return clear errors
+Hash passwords and enforce unique email
 
 ### Action Items
 
-<< A list of things that need to happen in our for our team to complete the sprint >>
+Build signup and login routes with validation and hashing
+Add session handling and a protected test route
 
 ### Issues and Risks
 
-<< A list of potential obstacles that could keep us from completing the sprint and what's being done about them >>
+Password security and session bugs may appear
 
 ### Team Work Assignments
 
-<< A list of each team member and their works assignments for this sprint >>
+
+Alex backend auth routes hashing and session logic
+Vaughn frontend pages for signup login and posting plus documentation
+Vishil database integration query checks and testing
