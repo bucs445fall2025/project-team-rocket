@@ -1,5 +1,6 @@
 # Potential Classes:
 
+```
 class MyClass:
  pass
 
