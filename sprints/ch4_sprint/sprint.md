@@ -57,7 +57,18 @@ Session management and auth guard for protected pages
 
 ### User Stories
 
-<< Corresponding User Stories >>
+## Epic: User Accounts
+What we want to do: Let people make accounts and log in, different types of users
+
+User Stories:
+
+•  Making an Account
+  - As a student looking for internships, I want to sign up with my email and password so that I can save internships I like and post my own
+•⁠  ⁠Logging In  
+  - As a student who already has an account, I want to log back into my account so that I can see my saved stuff and post internships
+•⁠  ⁠Different User Types
+  - As an admin person, I want to give users different permissions so that we can have moderators and stuff
+
 
 ### Planning
 
