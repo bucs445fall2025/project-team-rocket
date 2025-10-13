@@ -41,7 +41,7 @@ We are creating a web app where students can share and find internship opportuni
 
 ## Requirements Flex
 
-3/5 requirement flexes remaining
+5/5 requirement flexes remaining
 
 ## Technical Debt
 
