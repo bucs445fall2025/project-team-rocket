@@ -1,71 +1,85 @@
 # Sprint Meeting Notes
 
-*note: replace anything surrounded by << >> and **remove** the << >>*
+**Attended**: Alex Eskenazi, Vaughn Stout, Vishil Patel
 
-**Attended**: << record the team members in attendance (virtual counts as long as they are participating) >>
-
-**DATE**: << meeting date >>
+**DATE**: 10/13/2025
 
 ***
 
-## Sprint << num >> Review
+## Sprint 5 Review
 
 ### SRS Sections Updated
 
-<< List any SRS sections that were updated in the last sprint >>
+User Interface Requirements, Authentication Requirements, Security Requirements
 
 ### User Story
 
-<< Corresponding User Stories completed in this sprint >>
+Epic: User Accounts - Making an Account, Logging In, Different User Types
+Frontend pages for user registration and login interface
 
 ### Sprint Requirements Attempted
 
-<< The corresponding SRS requirement that the team completed in the last sprint >>
+User authentication system including signup, login, and session management
+Frontend development for authentication pages
+Password hashing and email uniqueness validation
 
 ### Completed Requirements
 
-<< The work that's been completed in this sprint >>
+Successfully implemented backend authentication routes with password hashing and session management. Created frontend signup and login pages with proper form validation. Integrated database with user account storage and authentication checks. Session handling and protected routes are working properly.
 
 ### Incomplete Requirements
 
-<< The work that has not been completed in this sprint. Be VERY detailed and specific regarding what isn't working and what needs to be completed >>
+None - all authentication requirements were completed successfully in this sprint.
 
 ### The summary of the entire project
 
-<< A general overview of the entire project >>
+We are creating a web app where students can share and find internship opportunities. Users can post internships with details like the company, description, and tags, and others can comment or upvote them. The goal is to make it easier for students to discover real, useful internships all in one place. We're building with React frontend, FastAPI backend, and SQLite database.
 
 ***
 
-## Sprint << num >> Planning
+## Sprint 6 Planning
 
 ## Requirements Flex
 
-<< # >>/5 requirement flexes remaining
+3/5 requirement flexes remaining
 
 ## Technical Debt
 
-<< Any requirements from the previous sprint that are using a technical flex >>
+None from previous sprint - authentication system was completed successfully.
 
 ### Requirement Target
 
-<< The corresponding SRS requirement that our team will be complete in next sprint >>
+Frontend internship posting functionality
+Backend API endpoints for creating and managing internship posts
+Integration of posting system with authentication
 
 ### User Stories
 
-<< Corresponding User Stories >>
+Epic: Internship Posting
+- As a student, I want to post internship opportunities so that I can share valuable opportunities with other students
+- As a student, I want to add details like company name, description, and tags to my internship posts so that others can easily understand the opportunity
+- As a student, I want to edit or delete my own posts so that I can keep information accurate and up-to-date
 
 ### Planning
 
-<< Our team's detailed plan to complete the sprint >>
+Create frontend forms for internship posting with fields for title, company, description, tags, and link. Build backend API routes for post creation, editing, and deletion. Implement proper validation and error handling. Connect posting system to authentication so only logged-in users can post.
 
 ### Action Items
 
-<< A list of things that need to happen in our for our team to complete the sprint >>
+- Build frontend posting form with validation
+- Create backend API endpoints for post CRUD operations
+- Implement proper authorization checks for post management
+- Add database schema updates for post storage
+- Test posting functionality end-to-end
 
 ### Issues and Risks
 
-<< A list of potential obstacles that could keep us from completing the sprint and what's being done about them >>
+- Form validation complexity may cause delays
+- Integration between frontend and backend posting may require debugging
+- Database schema changes could affect existing authentication system
 
 ### Team Work Assignments
 
-<< A list of each team member and their works assignments for this sprint >>
+Alex: Frontend posting forms, UI design for post creation and editing pages
+Vaughn: Backend API routes for posts, database schema updates, documentation
+Vishil: Testing posting functionality, validation logic, integration testing
