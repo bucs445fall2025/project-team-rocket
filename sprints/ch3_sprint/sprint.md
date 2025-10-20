@@ -80,7 +80,7 @@ Design / Architecture:
 
 Frontend: React + TailwindCSS (clean, mobile-friendly).
 
-Backend: Python FastAPI.
+Backend: Python Flask.
 
 Database: SQLite (file-based, easy to set up).
 
@@ -96,7 +96,7 @@ Search + filter by tags.
 
 Reporting feature.
 
-Flow: Browser → API (FastAPI) → Database → API response → UI update.
+Flow: Browser → API (Flask) → Database → API response → UI update.
 ## **Test Environment:**
 Local testing on our laptops.
 
@@ -121,8 +121,8 @@ Team will communicate through text, and will have weekly meetings on Fridays fro
 
 ## **Application Stack:**
 Frontend will use React library, probably with CSS for UI.
-Backend API will use Python, likely with Flask framework.
-Backend DB will use PostgreSQL.
+Backend API will use Python with Flask framework.
+Backend DB will use SQLite.
 
 
 ### **Libraries/Frameworks:**

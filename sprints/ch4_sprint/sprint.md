@@ -1,14 +1,12 @@
 # Sprint Meeting Notes
 
-*note: replace anything surrounded by << >> and **remove** the << >>*
-
 **Attended**: Alex Eskenazi, Vaughn Stout, Vishil Patel
 
 **DATE**: 10/6/2025
 
 ***
 
-## Sprint Review
+## Sprint 4 Review
 
 ### SRS Sections Updated
 
@@ -43,7 +41,7 @@ The goal is to make it easier for students to discover real, useful internships 
 
 ## Requirements Flex
 
-<< # >>/3 requirement flexes remaining
+3/3 requirement flexes remaining
 
 ## Technical Debt
 

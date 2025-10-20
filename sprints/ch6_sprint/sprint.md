@@ -33,7 +33,7 @@ None - all authentication requirements were completed successfully in this sprin
 
 ### The summary of the entire project
 
-We are creating a web app where students can share and find internship opportunities. Users can post internships with details like the company, description, and tags, and others can comment or upvote them. The goal is to make it easier for students to discover real, useful internships all in one place. We're building with React frontend, FastAPI backend, and SQLite database.
+We are creating a web app where students can share and find internship opportunities. Users can post internships with details like the company, description, and tags, and others can comment or upvote them. The goal is to make it easier for students to discover real, useful internships all in one place. We're building with React frontend, Flask backend, and SQLite database.
 
 ***
 
