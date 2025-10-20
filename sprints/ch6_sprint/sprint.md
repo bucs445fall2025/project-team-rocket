@@ -49,9 +49,9 @@ None from previous sprint - authentication system was completed successfully.
 
 ### Requirement Target
 
-Frontend internship posting functionality
-Backend API endpoints for creating and managing internship posts
-Integration of posting system with authentication
+- Frontend internship posting functionality
+- Backend API endpoints for creating and managing internship posts
+- Integration of posting system with authentication
 
 ### User Stories
 
