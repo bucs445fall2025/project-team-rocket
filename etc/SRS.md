@@ -31,55 +31,88 @@
 ## Document History
 - v1.0 - Initial requirements (September 29, 2025)
 - v1.1 - Database and backend requirements added (October 6, 2025) 
-- v1.2 - Team roles and testing requirements added (October 13, 2025)
+- v1.2 - Software architecture diagrams added (October 6, 2025)
+- v1.3 - Team roles and testing requirements added (October 13, 2025)
 
 ---
 
 ## Requirements
 
-### Functional Requirements
+### What Users Can Do
 
-**FR1:** Students can sign up and log in to their accounts
+• Students can sign up and log in to their accounts
 
-**FR2:** Different user roles: guest, regular user, moderator, and admin with appropriate permissions
+• Different user roles: guest, regular user, moderator, and admin with appropriate permissions
 
-**FR3:** Secure login system with password protection and session management
+• Secure login system with password protection and session management
 
-**FR4:** Users can create posts with a title, description, company link, and tags
+• Users can create posts with a title, description, company link, and tags
 
-**FR5:** Users can edit or delete their own posts anytime
+• Users can edit or delete their own posts anytime
 
-**FR6:** All internships show up in a clean, scrollable list with sorting options
+• All internships show up in a clean, scrollable list with sorting options
 
-**FR7:** Users can add comments under any internship post
+• Users can add comments under any internship post
 
-**FR8:** Users can see who commented and when, with ability to edit/delete their own comments
+• Users can see who commented and when, with ability to edit/delete their own comments
 
-**FR9:** Users can upvote or downvote internship posts (no double voting)
+• Users can upvote or downvote internship posts (no double voting)
 
-**FR10:** Posts with higher ratings appear first in the feed
+• Posts with higher ratings appear first in the feed
 
-**FR11:** Search functionality by keywords with real-time results
+• Search functionality by keywords with real-time results
 
-**FR12:** Filter posts by tags (Software Engineering, Remote, etc.)
+• Filter posts by tags (Software Engineering, Remote, etc.)
 
-**FR13:** Combine multiple filters for advanced searching capabilities
+• Combine multiple filters for advanced searching capabilities
 
-**FR14:** Moderators can approve posts before they go public
+• Moderators can approve posts before they go public
 
-**FR15:** Users can flag bad or outdated posts for review
+• Users can flag bad or outdated posts for review
 
-**FR16:** Admins can manage users and content with full control permissions
+• Admins can manage users and content with full control permissions
 
-### Non-Functional Requirements
+### Technical Stuff
 
-**NFR1:** Fully responsive design that works on both mobile and desktop devices
+• Fully responsive design that works on both mobile and desktop devices
 
-**NFR2:** Fast and stable database backend with optimized queries
+• Fast and stable database backend with optimized queries
 
-**NFR3:** Focused on security and reliability with proper data validation
+• Focused on security and reliability with proper data validation
 
-**NFR4:** Simple, user-friendly interface that's easy to navigate
+• Simple, user-friendly interface that's easy to navigate
+
+## Software Architecture Diagram
+
+### Application Architecture Diagram
+
+Our Internship Hub application follows a standard three-tier web architecture:
+
+![Three-Tier Architecture](misc/three-tier.png)
+
+**Component Interactions:**
+- Frontend communicates with Backend via RESTful API calls
+- Backend handles business logic and database operations
+- Database stores persistent data using SQLAlchemy ORM
+- Authentication flows through all layers for secure access
+
+### Backend Container Class Diagram
+
+Our Flask backend container includes the following classes and their relationships:
+
+
+![Backend Class Diagram](misc/diagram1.png)
+
+**Relationship Legend:**
+- **Inheritance**: Not used in our current model design
+- **Bidirectional Association** (◄──►): Post ↔ Comment (posts have comments, comments belong to posts)
+- **Unidirectional Association** (──►): User → Post, User → Comment, User → Vote, User → Report (users create posts/comments/votes/reports, but posts don't directly reference users beyond foreign key)
+
+**Key Relationships:**
+- User has many Posts, Comments, Votes, and Reports (1:many)
+- Post has many Comments, Votes, and Reports (1:many)
+- Comments and Votes belong to both User and Post (many:1)
+- Reports can be filed against Posts by Users (many:1)
 
 ## Account Features
 
