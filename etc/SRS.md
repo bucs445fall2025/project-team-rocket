@@ -178,6 +178,162 @@ Focused on security and reliability
 
 Simple, user-friendly interface
 
+## User Interface
+
+We built a bunch of different screens for the Internship Hub app. Everything works on phones and computers. Here's what each screen does:
+
+### Main App Screens
+
+#### Home Page
+This is where people go to look for internships.
+
+![Landing Page](misc/ihub-landing-page.png)
+
+What's on this page:
+- Search box to find specific jobs or companies
+- Filter buttons for tags like "Remote" or "Software"
+- Sort by newest posts or most popular ones
+- Each internship shows up as a card with upvote/downvote buttons
+- Page numbers at the bottom to see more posts
+- Header with login button or user menu
+
+What users do:
+- Type in the search box to find internships
+- Click upvote or downvote on posts
+- Click on a post to see more details
+- Use the login/signup buttons
+
+#### Sign Up Page
+Where new users make accounts.
+
+![Registration Page](misc/ihub-registration.png)
+
+What's on this page:
+- Username box
+- Email box  
+- Password box
+- Confirm password box
+- Error messages if something's wrong
+- Link to login page if you already have an account
+
+What users do:
+- Fill out all the boxes
+- Click sign up button
+- Go to login page if they already have an account
+
+#### Login Page
+Where existing users sign in.
+
+![Login Page](misc/ihub-login.png)
+
+What's on this page:
+- Username or email box
+- Password box
+- Error message if login fails
+- Link to sign up page
+- Pretty simple layout
+
+What users do:
+- Type their username and password
+- Click login button
+- Go to sign up if they need to make an account
+
+#### Post Internship Page
+Where users share job opportunities.
+
+![Post Creation](misc/ihub-post-add.png)
+
+What's on this page:
+- Title field (required)
+- Company name field (optional)
+- Description box (required)
+- Link to apply field (required)
+- Tags field (optional)
+- Error messages if fields are missing
+- Submit and cancel buttons
+
+What users do:
+- Fill out the internship info
+- Add tags to help people find it
+- Submit to post it
+- Cancel to go back
+
+#### Report Post Feature
+Users can flag bad posts.
+
+![Post Reporting](misc/ihub-post-report.png)
+
+What's on this page:
+- Text box to explain why they're reporting
+- Submit and cancel buttons
+- Simple popup form
+
+What users do:
+- Write why the post is bad (expired, spam, etc.)
+- Submit the report
+- Cancel if they change their mind
+
+### Admin Screens
+
+#### Admin Reports Page
+Where admins handle user reports.
+
+![Admin Reports](misc/ihub-admin-reports.png)
+
+What's on this page:
+- Table showing all the reports
+- Info about each post and who reported it
+- Buttons to dismiss, delete post, or mark expired
+- Filter to show pending or resolved reports
+
+What admins do:
+- Look at reported posts
+- Decide if reports are valid
+- Delete bad posts or dismiss false reports
+- Keep track of what they've reviewed
+
+#### Admin Posts Page
+Where admins manage all posts.
+
+![Admin Post Management](misc/ihub-admin-post-management.png)
+
+What's on this page:
+- List of all posts in the system
+- Shows if posts are active, deleted, or expired
+- Post info like title, author, vote score
+- Delete/restore buttons
+- Filter to show different types of posts
+
+What admins do:
+- Delete inappropriate posts
+- Restore posts that were deleted by mistake
+- See how many reports each post has
+- Filter to find specific posts
+
+### How We Designed Everything
+
+Basic stuff we tried to keep the same:
+- Same navigation bar on every page
+- Buttons look the same everywhere
+- Forms work the same way
+
+Making it usable:
+- Big enough text that's easy to read
+- Good color contrast
+- Works with keyboard navigation
+- Screen readers can use it
+
+Works on different devices:
+- Mobile phones and tablets work fine
+- Layout adjusts to screen size
+- Buttons are big enough to tap on phones
+
+User experience stuff:
+- Easy to figure out how to use
+- Shows error messages that actually help
+- Don't have to click through tons of pages
+- Gives feedback when you do something
+
 ## Testing
 
 ### Backend Model Tests
