@@ -120,10 +120,10 @@ A set of fake posts in the database so we can test filters and rankings.
 Team will communicate through text, and will have weekly meetings on Fridays from 3:00PM-4:00PM. Will regularly check up with each other on sprint progress or after any commits are made.
 
 ## **Application Stack:**
-Frontend will use React library, probably with CSS for UI.
+Frontend will use React library with TailwindCSS for UI.
 Backend API will use Python with Flask framework.
 Backend DB will use SQLite.
 
 
 ### **Libraries/Frameworks:**
-React, Flask.
+React, TailwindCSS, Flask.
