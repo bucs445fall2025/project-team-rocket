@@ -2,15 +2,20 @@
 
 ## SRS Section(s)Updated
 
+- Interfaces
 
 ## Requirements Attempted in this Sprint
 
+- Posting and Login
 
 ## Requirements complete
 
+- Posting
+- Login
 
 ## Requirements incomplete
 
+- N/A
 
 ## Requirement Flex Remaining
 
@@ -18,9 +23,11 @@
 
 ## Requirements Attempted in next Sprint
 
+- Verify Mobile Friendly Page Design
 
 ## Milestone Status
 
+Pass
 
 ## Requested Changes
 
