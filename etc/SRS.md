@@ -1,7 +1,7 @@
 # Software Requirements Specification – Internship Hub
 
-**Version:** 1.3  
-**Date:** October 13, 2025  
+**Version:** 1.4
+**Date:** November 3, 2025  
 **Authors:** Alex Eskenazi, Vaughn Stout, Vishil Patel
 
 ## Team Roles
@@ -17,7 +17,6 @@
 - Overall code quality oversight
 - Ensures application meets user requirements
 - All documentation: SRS, README, Docstrings
-- Acceptance Test Procedures
 - Integration tests
 - Testing Coverage
 
@@ -30,9 +29,10 @@
 
 ## Document History
 - v1.0 - Initial requirements (September 29, 2025)
-- v1.1 - Database and backend requirements added (October 6, 2025) 
+- v1.1 - Database and backend requirements added (October 6, 2025)
 - v1.2 - Software architecture diagrams added (October 6, 2025)
 - v1.3 - Team roles and testing requirements added (October 13, 2025)
+- v1.4 - User stories section added with epics and requirements mapping (November 3, 2025)
 
 ---
 
@@ -81,6 +81,111 @@
 • Focused on security and reliability with proper data validation
 
 • Simple, user-friendly interface that's easy to navigate
+
+## User Stories
+
+User stories help us figure out what users actually need and why they need it. We're using the format from class: "As a [type of user], I want [goal] so that [reason]."
+
+### Epic 1: Account Management and Authentication
+
+**User Story 1.1: User Registration**
+- As a student, I want to create an account with a username and password so that I can start posting and interacting with internship opportunities
+- Related Requirements: Students can sign up and log in to their accounts, Secure login system with password protection
+
+**User Story 1.2: User Login**
+- As a returning user, I want to log in with my credentials so that I can access my account and previous posts
+- Related Requirements: Students can sign up and log in to their accounts, Secure login system with password protection
+
+**User Story 1.3: Role-Based Access**
+- As an admin, I want different permission levels for users so that I can control who can moderate content
+- Related Requirements: Different user roles: guest, regular user, moderator, and admin with appropriate permissions
+
+### Epic 2: Internship Posting and Management
+
+**User Story 2.1: Create Internship Post**
+- As a student, I want to post internship opportunities with all the details so that I can share valuable opportunities with other students
+- Related Requirements: Users can create posts with a title, description, company link, and tags
+
+**User Story 2.2: Edit Own Posts**
+- As a user, I want to edit my own posts so that I can fix typos or update information that changed
+- Related Requirements: Users can edit or delete their own posts anytime
+
+**User Story 2.3: Delete Own Posts**
+- As a user, I want to delete posts I created so that I can remove opportunities that are no longer available
+- Related Requirements: Users can edit or delete their own posts anytime
+
+**User Story 2.4: View All Posts**
+- As a student, I want to see all available internships in a scrollable list so that I can browse through opportunities easily
+- Related Requirements: All internships show up in a clean, scrollable list with sorting options
+
+### Epic 3: Community Interaction
+
+**User Story 3.1: Add Comments**
+- As a user, I want to comment on internship posts so that I can ask questions or share my experience with that company
+- Related Requirements: Users can add comments under any internship post
+
+**User Story 3.2: View Comments**
+- As a student browsing posts, I want to see all comments and who wrote them so that I can learn from others' experiences
+- Related Requirements: Users can see who commented and when, with ability to edit/delete their own comments
+
+**User Story 3.3: Edit/Delete Own Comments**
+- As a commenter, I want to edit or delete my comments so that I can correct mistakes or remove comments I no longer want visible
+- Related Requirements: Users can see who commented and when, with ability to edit/delete their own comments
+
+**User Story 3.4: Upvote Posts**
+- As a student, I want to upvote helpful internship posts so that good opportunities rise to the top for everyone
+- Related Requirements: Users can upvote or downvote internship posts (no double voting), Posts with higher ratings appear first
+
+**User Story 3.5: Downvote Posts**
+- As a user, I want to downvote unhelpful or suspicious posts so that low-quality content doesn't waste others' time
+- Related Requirements: Users can upvote or downvote internship posts (no double voting), Posts with higher ratings appear first
+
+### Epic 4: Search
+
+**User Story 4.1: Keyword Search**
+- As a student looking for specific opportunities, I want to search by keywords like company names or job titles so that I can quickly find relevant internships
+- Related Requirements: Search functionality by keywords with real-time results
+
+**User Story 4.2: Filter by Tags**
+- As a user, I want to filter posts by tags like "Remote" or "Software Engineering" so that I only see internships that match my interests
+- Related Requirements: Filter posts by tags (Software Engineering, Remote, etc.)
+
+**User Story 4.3: Advanced Filtering**
+- As a student with specific criteria, I want to combine multiple filters so that I can narrow down to exactly what I'm looking for
+- Related Requirements: Combine multiple filters for advanced searching capabilities
+
+### Epic 5: Administration
+
+**User Story 5.1: Report Bad Posts**
+- As a user, I want to flag inappropriate or outdated posts so that admins can review and remove them
+- Related Requirements: Users can flag bad or outdated posts for review
+
+**User Story 5.2: Review Reports**
+- As an admin, I want to see all reported posts in one place so that I can efficiently moderate content
+- Related Requirements: Admins can manage users and content with full control permissions
+
+**User Story 5.3: Delete/Restore Posts**
+- As an admin, I want to delete posts that violate guidelines or restore falsely deleted posts so that the platform stays clean and fair
+- Related Requirements: Admins can manage users and content with full control permissions
+
+**User Story 5.4: Approve Posts (Future)**
+- As a moderator, I want to approve posts before they go live so that we can prevent spam from appearing on the site
+- Related Requirements: Moderators can approve posts before they go public
+- Note: We haven't implemented this yet, might add it later if we have time
+
+### Epic 6: User Experience and Accessibility
+
+**User Story 6.1: Mobile Access**
+- As a student on my phone, I want the app to work well on mobile so that I can browse internships anywhere
+- Related Requirements: Fully responsive design that works on both mobile and desktop devices
+
+**User Story 6.2: Fast Performance**
+- As any user, I want pages to load quickly so that I don't waste time waiting
+- Related Requirements: Fast and stable database backend with optimized queries
+
+**User Story 6.3: Intuitive Interface**
+- As a new user, I want the interface to be easy to understand so that I can start using the app without confusion
+- Related Requirements: Simple, user-friendly interface that's easy to navigate
 
 ## Software Architecture Diagram
 
@@ -335,6 +440,8 @@ User experience stuff:
 - Gives feedback when you do something
 
 ## Testing
+
+We need to test all the backend and frontend stuff to make sure it works. Here's what we plan to test:
 
 ### Backend Model Tests
 - **User Model**
