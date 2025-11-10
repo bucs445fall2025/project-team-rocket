@@ -1,14 +1,14 @@
 # Software Requirements Specification – Internship Hub
 
-**Version:** 1.4
-**Date:** November 3, 2025  
+**Version:** 1.5
+**Date:** November 10, 2025
 **Authors:** Alex Eskenazi, Vaughn Stout, Vishil Patel
 
 ## Team Roles
 
 **Alex Eskenazi - Front-End Lead**
 - GUI and Controller development
-- UI Design and user interactions  
+- UI Design and user interactions
 - UX (user experience design)
 - Front-end functionality implementation
 - Functional Tests
@@ -23,7 +23,7 @@
 **Vishil Patel - Back-End Lead**
 - Database design and implementation
 - Data persistence and services
-- Models and data API classes  
+- Models and data API classes
 - Back-end logic development
 - Unit Tests
 
@@ -33,6 +33,7 @@
 - v1.2 - Software architecture diagrams added (October 6, 2025)
 - v1.3 - Team roles and testing requirements added (October 13, 2025)
 - v1.4 - User stories section added with epics and requirements mapping (November 3, 2025)
+- v1.5 - Project status section added with known bugs, missing features, and Phase 2 plans (November 10, 2025)
 
 ---
 
@@ -438,6 +439,73 @@ User experience stuff:
 - Shows error messages that actually help
 - Don't have to click through tons of pages
 - Gives feedback when you do something
+
+## Project Status
+
+### Known Bugs
+
+1) **Title:** Hardcoded Secret Key in Source Code
+   - description: The Flask secret key is hardcoded directly in app.py instead of using an environment variable. This is a security risk because anyone with access to the code can see the secret key, which could let them fake user sessions.
+   - nature: security
+   - severity: critical
+   - priority: P1
+
+2) **Title:** Weak Password Requirements
+   - description: Passwords only need to be 6 characters long with no other requirements. There's no check for uppercase letters, numbers, or special characters, which makes accounts easier to hack.
+   - nature: security
+   - severity: high
+   - priority: P1
+
+3) **Title:** Can't Edit Posts from the UI
+   - description: The backend API has the code to edit posts, but there's no edit button or form on the frontend. Users can't actually edit their posts even though the database supports it.
+   - nature: functional
+   - severity: medium
+   - priority: P2
+
+4) **Title:** Can't Edit Comments from the UI
+   - description: Same problem as with posts - the backend works, but there's no way to edit a comment from the website. You'd have to delete and repost if you made a typo.
+   - nature: functional
+   - severity: medium
+   - priority: P2
+
+5) **Title:** Using Alert Popups Instead of Nice Notifications
+   - description: The app uses browser alert() popups for messages, which look bad and interrupt what you're doing. Should use toast notifications or inline messages instead.
+   - nature: UI/UX
+   - severity: low
+   - priority: P2
+
+6) **Title:** Tags Data Type Confusion
+   - description: Tags are stored as a comma-separated string in the database but sometimes the frontend treats them like an array. This causes bugs when trying to display or filter tags.
+   - nature: functional
+   - severity: medium
+   - priority: P2
+
+7) **Title:** Generic Error Messages
+   - description: When something goes wrong, the app just says "Failed to create post" or similar generic messages. It doesn't tell you what actually went wrong, which makes it hard to fix problems.
+   - nature: UI/UX
+   - severity: low
+   - priority: P3
+
+### Critical Non-Implemented Features
+
+1) **Feature:** Post Moderation/Approval System
+   - description: The SRS says moderators should be able to approve posts before they go public, but this isn't implemented at all. Right now all posts go live immediately. The database has an 'approved' field but it's always set to true automatically.
+   - priority: P1
+
+2) **Feature:** Password Reset/Recovery
+   - description: If users forget their password, there's no way to reset it. They'd be locked out of their account permanently. We need to add a "Forgot Password" link and email system.
+   - priority: P1
+
+3) **Feature:** User Profile Management
+   - description: Users can't update their email, change their password, or edit any profile information after signing up. There's no profile page at all.
+   - priority: P2
+
+
+### Phase 2 Features (planned)
+
+1) **Planned Feature:** Email Notifications
+   - description: Send email alerts when someone comments on your post, when your post gets upvoted, or when an admin reviews a report you filed.
+   - Note: we may not be able do do this for free as the email sending services cost some money.
 
 ## Testing
 
