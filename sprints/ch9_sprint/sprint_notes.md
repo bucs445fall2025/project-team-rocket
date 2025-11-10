@@ -69,7 +69,6 @@
   - The secret key is hardcoded in the code which is bad
   - Password requirements are too weak (only 6 characters)
 
-•
 ### The summary of the entire project
 
 Internship Hub is a web app where college students can share and find internship opportunities. It's like Reddit but specifically for internships. Users can post opportunities with details like company name, description, and application link. Other students can upvote good posts, downvote bad ones, and leave comments asking questions or sharing their experiences. There's also an admin system for moderating content and handling reports. The backend is built with Flask and SQLAlchemy, and the frontend uses React with TypeScript. Right now the core features work but we have some bugs to fix and missing features to add.
@@ -96,8 +95,6 @@ Internship Hub is a web app where college students can share and find internship
 
 • Users can see who commented and when, with ability to edit/delete their own comments
 
-• Search functionality by keywords with real-time results
-
 ### User Stories
 
 **User Story 2.2: Edit Own Posts**
@@ -105,9 +102,6 @@ Internship Hub is a web app where college students can share and find internship
 
 **User Story 3.3: Edit/Delete Own Comments**
 - As a commenter, I want to edit or delete my comments so that I can correct mistakes or remove comments I no longer want visible
-
-**User Story 4.1: Keyword Search**
-- As a student looking for specific opportunities, I want to search by keywords like company names or job titles so that I can quickly find relevant internships
 
 ### Planning
 
@@ -119,8 +113,8 @@ Internship Hub is a web app where college students can share and find internship
 
 ### Action Items
 
-- Alex: Build the edit post and edit comment UI components, update the search to work in real-time
-- Vaughn: Fix the security issues (secret key, password validation, rate limiting), write documentation for the fixes
+- Alex: Build the edit post and edit comment UI components
+- Vaughn: Fix the security issues (secret key, password validation), write documentation for the fixes
 - Vishil: Add database indexes, optimize the queries that are running multiple times
 
 ### Issues and Risks
