@@ -40,22 +40,15 @@
 • Posts with higher ratings appear first in the feed
 
 ### Completed Requirements
+• Implemented signup and login with secure password hashing and session management
 
-• Got the basic user authentication working - students can sign up and log in
+• Finished post creation with required fields (title, description, company, link, tags)
 
-• Finished the post creation feature with all the required fields (title, description, company, link, tags)
+• Built the home feed showing all posts in a scrollable list
 
-• Built the home page that shows all posts in a scrollable list
+• Implemented voting with double-vote prevention
 
-• Voting system works - you can upvote/downvote posts and it prevents double voting
-
-• Posts are sorted by vote score so popular ones show up first
-
-• Set up the database with all the models (User, Post, Comment, Vote, Report)
-
-• Admin panel is working for managing reports and posts
-
-• Comment system lets users add comments to posts
+• Feed sorted so higher-rated posts appear first
 
 ### Incomplete Requirements
 
