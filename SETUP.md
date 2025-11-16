@@ -5,9 +5,10 @@ This guide will help you get the app running on your local machine.
 ## Prerequisites
 
 You need to have these installed first:
-- Python 3.10+
-- Node.js 16+ and npm
-- Docker Desktop
+
+* Python 3.10+
+* Node.js 16+ and npm
+* Docker Desktop
 
 ## Step 1: Clone the Repository
 
@@ -59,8 +60,9 @@ python app.py
 The backend should start on http://localhost:5001
 
 When it starts for the first time, it will automatically:
-- Create all the database tables
-- Create an admin account (username: `admin`, password: `admin123`)
+
+* Create all the database tables
+* Create an admin account (username: `admin`, password: `admin123`)
 
 Keep this terminal window open!
 
@@ -87,12 +89,14 @@ If it doesn't open automatically, just go to http://localhost:3000 in your brows
 Once everything is set up, here's how to start the app:
 
 **Terminal 1 (Backend):**
+
 ```bash
 source venv/bin/activate
 python app.py
 ```
 
 **Terminal 2 (Frontend):**
+
 ```bash
 cd frontend
 npm start
@@ -101,29 +105,38 @@ npm start
 ## Common Issues
 
 ### Port 5001 already in use
+
 If you're on a Mac, AirPlay uses port 5000/5001. Either:
-- Turn off AirPlay Receiver in System Preferences
-- Or change the port in `app.py` (last line)
+
+* Turn off AirPlay Receiver in System Preferences
+* Or change the port in `app.py` (last line)
 
 ### Port 3000 already in use
+
 Something else is using port 3000. Kill it:
+
 ```bash
 lsof -ti:3000 | xargs kill -9
 ```
 
 ### MySQL container won't start
+
 Maybe you already have MySQL running locally. Check:
+
 ```bash
 docker ps -a
 ```
 
 If you see `ihub-mysql-1` but it's stopped, just start it:
+
 ```bash
 docker start ihub-mysql-1
 ```
 
 ### Can't connect to database
+
 Make sure the MySQL container is actually running:
+
 ```bash
 docker ps | grep mysql
 ```
@@ -131,19 +144,23 @@ docker ps | grep mysql
 If it's not there, go back to Step 2.
 
 ### Frontend can't reach backend
+
 Make sure both servers are running. The frontend expects the backend at http://localhost:5001
 
 ## Stopping Everything
 
 **Stop the servers:**
-- Press `Ctrl+C` in both terminal windows
+
+* Press `Ctrl+C` in both terminal windows
 
 **Stop the MySQL container:**
+
 ```bash
 docker stop ihub-mysql-1
 ```
 
 **Start it again later:**
+
 ```bash
 docker start ihub-mysql-1
 ```
@@ -158,6 +175,7 @@ You can use this to access the admin panel at http://localhost:3000/admin
 ## Database Management
 
 **Reset the database:**
+
 ```bash
 docker stop ihub-mysql-1
 docker rm ihub-mysql-1
@@ -165,11 +183,13 @@ docker rm ihub-mysql-1
 ```
 
 **View database contents:**
+
 ```bash
 docker exec -it ihub-mysql-1 mysql -uihub_user -pihub_password internship_hub
 ```
 
 Then you can run SQL queries like:
+
 ```sql
 SHOW TABLES;
 SELECT * FROM user;
@@ -179,8 +199,10 @@ Type `exit` to quit the MySQL shell.
 
 ## Notes
 
-- The virtual environment (`venv/`) should NOT be committed to git - it's already in .gitignore
-- Same with `node_modules/` in the frontend
-- If you pull new changes from git, you might need to:
-  - `pip install -r backend/requirements.txt` (if backend dependencies changed)
-  - `cd frontend && npm install` (if frontend dependencies changed)
+* The virtual environment (`venv/`) should NOT be committed to git - it's already in .gitignore
+* Same with `node_modules/` in the frontend
+* If you pull new changes from git, you might need to:
+  * `pip install -r backend/requirements.txt` (if backend dependencies changed)
+  * `cd frontend && npm install` (if frontend dependencies changed)
+
+
