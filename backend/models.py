@@ -45,11 +45,11 @@ class Post(db.Model):
     description = db.Column(db.Text, nullable=False)
     link = db.Column(db.String(500), nullable=False)
     tags = db.Column(db.String(500))  # store as comma separated string
-    author_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    status = db.Column(db.String(20), nullable=False, default='active')  # active, deleted, expired
-    approved = db.Column(db.Boolean, nullable=False, default=True)  
+    author_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False, index=True)
+    status = db.Column(db.String(20), nullable=False, default='active', index=True)  # active, deleted, expired
+    approved = db.Column(db.Boolean, nullable=False, default=True)
     company = db.Column(db.String(200))
-    vote_score = db.Column(db.Integer, default=0)  # calculated from votes
+    vote_score = db.Column(db.Integer, default=0, index=True)  # calculated from votes
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 

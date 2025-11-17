@@ -15,6 +15,16 @@ const PostDetail: React.FC = () => {
   const [newComment, setNewComment] = useState('');
   const [commentLoading, setCommentLoading] = useState(false);
   const [voting, setVoting] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editForm, setEditForm] = useState({
+    title: '',
+    description: '',
+    company: '',
+    link: '',
+    tags: ''
+  });
+  const [editingCommentId, setEditingCommentId] = useState<number | null>(null);
+  const [editCommentContent, setEditCommentContent] = useState('');
 
   useEffect(() => {
     if (id) {
@@ -82,6 +92,90 @@ const PostDetail: React.FC = () => {
       navigate('/');
     } catch (error: any) {
       alert(error.response?.data?.error || 'Failed to delete post');
+    }
+  };
+
+  const handleEditClick = () => {
+    if (!post) return;
+    setEditForm({
+      title: post.title,
+      description: post.description,
+      company: post.company || '',
+      link: post.link,
+      tags: post.tags.join(', ')
+    });
+    setIsEditing(true);
+  };
+
+  const handleEditSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!post) return;
+
+    try {
+      const response = await postsAPI.updatePost(post.id, {
+        title: editForm.title.trim(),
+        description: editForm.description.trim(),
+        company: editForm.company.trim() || undefined,
+        link: editForm.link.trim(),
+        tags: editForm.tags.trim() || undefined
+      });
+
+      // update the post with new data
+      setPost({
+        ...post,
+        title: response.data.post.title,
+        description: response.data.post.description,
+        company: response.data.post.company,
+        link: response.data.post.link,
+        tags: response.data.post.tags,
+        updated_at: response.data.post.updated_at
+      });
+      setIsEditing(false);
+    } catch (error: any) {
+      alert(error.response?.data?.error || 'Failed to update post');
+    }
+  };
+
+  const handleEditComment = (comment: Comment) => {
+    setEditingCommentId(comment.id);
+    setEditCommentContent(comment.content);
+  };
+
+  const handleSaveComment = async (commentId: number) => {
+    if (!editCommentContent.trim()) return;
+
+    try {
+      const response = await commentsAPI.updateComment(commentId, editCommentContent.trim());
+
+      // update the comment in the list
+      setComments(comments.map(c =>
+        c.id === commentId
+          ? { ...c, content: response.data.comment.content }
+          : c
+      ));
+      setEditingCommentId(null);
+      setEditCommentContent('');
+    } catch (error: any) {
+      alert(error.response?.data?.error || 'Failed to update comment');
+    }
+  };
+
+  const handleDeleteComment = async (commentId: number) => {
+    if (!window.confirm('Are you sure you want to delete this comment?')) return;
+
+    try {
+      await commentsAPI.deleteComment(commentId);
+      setComments(comments.filter(c => c.id !== commentId));
+
+      // update comment count
+      if (post) {
+        setPost({
+          ...post,
+          comment_count: post.comment_count - 1
+        });
+      }
+    } catch (error: any) {
+      alert(error.response?.data?.error || 'Failed to delete comment');
     }
   };
 
@@ -175,12 +269,20 @@ const PostDetail: React.FC = () => {
               </div>
 
               {post.can_edit && (
-                <button
-                  onClick={handleDeletePost}
-                  className="text-red-600 hover:text-red-700 text-sm"
-                >
-                  Delete
-                </button>
+                <div className="flex items-center space-x-3">
+                  <button
+                    onClick={handleEditClick}
+                    className="text-blue-600 hover:text-blue-700 text-sm"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={handleDeletePost}
+                    className="text-red-600 hover:text-red-700 text-sm"
+                  >
+                    Delete
+                  </button>
+                </div>
               )}
             </div>
 
@@ -268,13 +370,155 @@ const PostDetail: React.FC = () => {
                     <span>•</span>
                     <span>{formatDate(comment.created_at)}</span>
                   </div>
+
+                  {comment.can_edit && (
+                    <div className="flex items-center space-x-3 text-sm">
+                      <button
+                        onClick={() => handleEditComment(comment)}
+                        className="text-blue-600 hover:text-blue-700"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => handleDeleteComment(comment.id)}
+                        className="text-red-600 hover:text-red-700"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  )}
                 </div>
-                <p className="text-gray-700 whitespace-pre-wrap">{comment.content}</p>
+
+                {editingCommentId === comment.id ? (
+                  <div className="mt-2">
+                    <textarea
+                      value={editCommentContent}
+                      onChange={(e) => setEditCommentContent(e.target.value)}
+                      className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                      rows={3}
+                    />
+                    <div className="flex items-center justify-end space-x-2 mt-2">
+                      <button
+                        onClick={() => {
+                          setEditingCommentId(null);
+                          setEditCommentContent('');
+                        }}
+                        className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={() => handleSaveComment(comment.id)}
+                        className="px-3 py-1 bg-primary-600 text-white text-sm rounded-md hover:bg-primary-700"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <p className="text-gray-700 whitespace-pre-wrap">{comment.content}</p>
+                )}
               </div>
             ))}
           </div>
         )}
       </div>
+
+      {/* Edit modal */}
+      {isEditing && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg shadow-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Edit Post</h2>
+
+            <form onSubmit={handleEditSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="edit-title" className="block text-sm font-medium text-gray-700 mb-1">
+                  Title *
+                </label>
+                <input
+                  id="edit-title"
+                  type="text"
+                  required
+                  value={editForm.title}
+                  onChange={(e) => setEditForm({...editForm, title: e.target.value})}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="edit-company" className="block text-sm font-medium text-gray-700 mb-1">
+                  Company
+                </label>
+                <input
+                  id="edit-company"
+                  type="text"
+                  value={editForm.company}
+                  onChange={(e) => setEditForm({...editForm, company: e.target.value})}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="edit-link" className="block text-sm font-medium text-gray-700 mb-1">
+                  Application Link *
+                </label>
+                <input
+                  id="edit-link"
+                  type="url"
+                  required
+                  value={editForm.link}
+                  onChange={(e) => setEditForm({...editForm, link: e.target.value})}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="edit-description" className="block text-sm font-medium text-gray-700 mb-1">
+                  Description *
+                </label>
+                <textarea
+                  id="edit-description"
+                  required
+                  rows={6}
+                  value={editForm.description}
+                  onChange={(e) => setEditForm({...editForm, description: e.target.value})}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="edit-tags" className="block text-sm font-medium text-gray-700 mb-1">
+                  Tags
+                </label>
+                <input
+                  id="edit-tags"
+                  type="text"
+                  value={editForm.tags}
+                  onChange={(e) => setEditForm({...editForm, tags: e.target.value})}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
+                  placeholder="Separate with commas"
+                />
+              </div>
+
+              <div className="flex items-center justify-end space-x-3 pt-4 border-t border-gray-200">
+                <button
+                  type="button"
+                  onClick={() => setIsEditing(false)}
+                  className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-primary-600 text-white font-medium rounded-md hover:bg-primary-700"
+                >
+                  Save Changes
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

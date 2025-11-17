@@ -26,10 +26,20 @@ def signup():
     # some validation
     if len(username) < 3:
         return jsonify({'error': 'Username must be at least 3 characters'}), 400
-    
-    if len(password) < 6:
-        return jsonify({'error': 'Password must be at least 6 characters'}), 400
-    
+
+    # stronger password requirements
+    if len(password) < 8:
+        return jsonify({'error': 'Password must be at least 8 characters'}), 400
+
+    # check for password complexity
+    has_upper = any(c.isupper() for c in password)
+    has_lower = any(c.islower() for c in password)
+    has_digit = any(c.isdigit() for c in password)
+    has_special = any(c in '!@#$%^&*()_+-=[]{}|;:,.<>?' for c in password)
+
+    if not (has_upper and has_lower and has_digit and has_special):
+        return jsonify({'error': 'Password must contain uppercase, lowercase, number, and special character'}), 400
+
     # check email has @ and .
     if '@' not in email or '.' not in email:
         return jsonify({'error': 'Please enter a valid email'}), 400
