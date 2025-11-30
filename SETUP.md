@@ -239,6 +239,30 @@ SELECT * FROM user;
 
 Type `exit` to quit the MySQL shell.
 
+## Project Structure
+
+```
+project-team-rocket/
+├── app.py                      # Main Flask application entry point
+├── backend/                    # Backend Python code
+│   ├── models.py              # Database models
+│   ├── auth.py                # Authentication routes
+│   ├── posts.py               # Posts API
+│   ├── votes.py               # Voting system
+│   ├── comments.py            # Comments API
+│   ├── reports.py             # Reporting system
+│   ├── admin.py               # Admin panel routes
+│   └── requirements.txt       # Python dependencies
+├── frontend/                   # React frontend
+│   ├── src/                   # Source code
+│   ├── public/                # Static files
+│   └── package.json           # Node dependencies
+├── run-backend.sh             # Script to start backend
+├── run-frontend.sh            # Script to start frontend
+├── add_sample_internships.py  # Script to add sample data
+└── venv/                      # Python virtual environment (not in git)
+```
+
 ## Notes
 
 * The virtual environment (`venv/`) should NOT be committed to git - it's already in .gitignore
