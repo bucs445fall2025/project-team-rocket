@@ -84,9 +84,35 @@ The frontend should open automatically in your browser at http://localhost:3000
 
 If it doesn't open automatically, just go to http://localhost:3000 in your browser.
 
-## Quick Summary
+## Quick Start with Shell Scripts (Recommended)
 
-Once everything is set up, here's how to start the app:
+We've created convenient shell scripts to make running the app easier:
+
+**Terminal 1 (Backend):**
+
+```bash
+./run-backend.sh
+```
+
+This script will automatically:
+- Create/activate the virtual environment
+- Install dependencies
+- Check MySQL connection
+- Start the Flask server
+
+**Terminal 2 (Frontend):**
+
+```bash
+./run-frontend.sh
+```
+
+This script will automatically:
+- Install npm dependencies if needed
+- Start the React development server
+
+## Manual Start (Alternative)
+
+If you prefer to start things manually:
 
 **Terminal 1 (Backend):**
 
@@ -171,6 +197,22 @@ Username: `admin`
 Password: `admin123`
 
 You can use this to access the admin panel at http://localhost:3000/admin
+
+## Adding Sample Data
+
+To populate the database with sample internship posts for testing:
+
+```bash
+python3 add_sample_internships.py
+```
+
+This will add 10 sample internship posts from companies like Google, Microsoft, Meta, Netflix, etc. The script:
+- Checks for duplicates (won't add posts that already exist)
+- Creates realistic internship listings with descriptions and tags
+- Makes all posts active and approved
+- Shows you a summary of what was added
+
+**Note:** Make sure the backend has been run at least once (to create the admin user) before running this script.
 
 ## Database Management
 
