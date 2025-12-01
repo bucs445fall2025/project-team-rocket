@@ -200,19 +200,33 @@ You can use this to access the admin panel at http://localhost:3000/admin
 
 ## Adding Sample Data
 
-To populate the database with sample internship posts for testing:
+### Option 1: Comprehensive Sample Data (Recommended)
+
+To populate the database with a complete set of test data including users, posts, comments, and votes:
+
+```bash
+python3 add_sample_data.py
+```
+
+This will add:
+- **9 test user accounts** (8 regular users + 1 moderator)
+- **12 sample internship posts** from major tech companies
+- **20-40 realistic comments** across the posts
+- **Vote activity** to create realistic vote scores
+
+All users have the password `password123` (except moderator who has `mod123`).
+
+### Option 2: Just Internship Posts
+
+If you only want to add internship posts without the test users:
 
 ```bash
 python3 add_sample_internships.py
 ```
 
-This will add 10 sample internship posts from companies like Google, Microsoft, Meta, Netflix, etc. The script:
-- Checks for duplicates (won't add posts that already exist)
-- Creates realistic internship listings with descriptions and tags
-- Makes all posts active and approved
-- Shows you a summary of what was added
+This will add 10 sample internship posts (posted by the admin user).
 
-**Note:** Make sure the backend has been run at least once (to create the admin user) before running this script.
+**Note:** Make sure the backend has been run at least once (to create the admin user) before running these scripts.
 
 ## Database Management
 
