@@ -2,7 +2,7 @@
 
 ## Directory Layout
 
-The project has been cleaned up and simplified. Here's the current structure:
+Current project structure:
 
 ```
 project-team-rocket/
@@ -39,6 +39,8 @@ project-team-rocket/
 ├── add_sample_internships.py  # Script to populate sample data
 ├── SETUP.md                   # Detailed setup instructions
 ├── README.md                  # Project overview
+├── LICENSE                    # Project license
+├── SCRIPTS.md                 # Helper scripts
 └── venv/                      # Python virtual environment (gitignored)
 ```
 
@@ -63,12 +65,3 @@ project-team-rocket/
 - **run-backend.sh**: Starts Flask backend (auto-installs dependencies)
 - **run-frontend.sh**: Starts React frontend (auto-installs dependencies)
 - **add_sample_internships.py**: Adds 10 sample internship posts to database
-
-## What Was Removed
-
-The old `internship-hub/` directory has been removed as it was:
-- An older project structure that's no longer used
-- Only contained empty directories and cache files
-- Causing confusion with the current `/backend/` directory
-
-All active backend code is now in the `/backend/` directory at the project root.
