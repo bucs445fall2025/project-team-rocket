@@ -21,7 +21,8 @@ Web app with internship hub functionality, such as an account login system with 
   
 ### Prerequisites
 * [Docker](https://www.docker.com/)
-* <<any additional software. Be specific about versions.>>
+* Python 3.10+
+* Node.js 16+ and npm
 
 ### Installing
 <<
@@ -41,5 +42,4 @@ End with an example of getting some output from the system, such as a menu or pr
 GNU General Public License v3.0
 
 ## Acknowledgments
-Steven Moore - Project guidance/check-ins
-Abror Mamataliev - Project guidance/check-ins
+Steven Moore, Abror Mamataliev - Project guidance/check-ins
