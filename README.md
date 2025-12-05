@@ -1,21 +1,20 @@
-# << Project Title >>
+# Binghamton Student Internship Hub
 ## CS 445 Final Project
-### << Semester, Year >>
+### Fall 2025
 
-### Team: << team name >>
-<< List Team Members >>
+### Team: Rocket
+Alex Eskenazi, Vaughn Stout, Vishil Patel
 
 ## Getting Started
-<<One paragraph of project description goes here>>
+Web app with internship hub functionality, such as an account login system with admin/moderator/user roles, ability to view/vote/comment on posts, as well as upload your own. You can also filter specific posts you want through name or tags.
 
 ### Roadmap
-  <<
-A list of features, function or non-functional, you would like to add in the future if you had time, i.e. Phase 2 stuff
-- [ ] Add Changelog
-- [ ] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-  >>
+- [X] Login/signup system
+- [X] Post creation/deletion
+- [X] Post voting/commenting
+- [X] Filters
+- [X] Post tags
+- [ ] Time of upload (currently in UTC)
   
 ## SRS
 [document](url to google doc)
@@ -39,9 +38,8 @@ End with an example of getting some output from the system, such as a menu or pr
 * [requests](https://docs.python-requests.org/en/latest/user/quickstart/#make-a-request) - request for humans
 
 ## License
-<< Add a [license](https://choosealicense.com/) >>
+GNU General Public License v3.0
 
 ## Acknowledgments
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+Steven Moore - Project guidance/check-ins
+Abror Mamataliev - Project guidance/check-ins
